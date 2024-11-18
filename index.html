@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maycon Pereira</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="script.js" defer></script> <!-- Use defer para garantir que o script seja carregado após o HTML -->
+</head>
+<body>
+    <!-- <div id="intro">
+        <video id="introVideo" autoplay muted>
+            <source src="assets/intro_portfolio.mp4" type="video/mp4">
+            Seu navegador não suporta o vídeo.
+        </video>
+    </div> -->
+    <div id="Page">
+        <header>
+            <div class="interface">
+                <section class="menu-desktop">
+                    <i class='bx bx-menu' id="menu-icon"></i>
+                    <nav class="navbar">
+                        <ul>
+                            <li class="item-menu"><a href="#topo-site" class="active">HOME</a></li>
+                            <li class="item-menu"><a href="#sobre">SOBRE</a></li>
+                            <li class="item-menu"><a href="#education">EDUCAÇÃO</a></li>
+                            <li class="item-menu"><a href="#portifolio">PROJETOS</a></li>
+                            <li class="item-menu"><a href="#formulario">CONTATO</a></li>
+                        </ul>
+                        <!-- <span class="animate scroll" style="--i:1"> -->
+                    </nav>
+                </section>
+            </div>
+        </header>
+        <main>
+             <section class="topo-site show-animate" id="topo-site">
+                <div class="interface">
+                    <div class="flex">
+                        <div class="txt-topo">
+                            <h1>Olá, eu sou o Maycon</h1>
+                            <h2>Desenvolvedor Full Stack</h2>
+                            <p>Paixão por desenvolver, precisão em cada pixel e compromisso com resultados que fazem a diferença no digital.</p>
+                            <div class="container-icons">
+                                <div class="social-icons">
+                                    <a href="https://github.com/MayconPereira0"><i class='bx bxl-github'></i></a>
+                                    <a href="https://www.linkedin.com/in/maycon-pereira"><i class='bx bxl-linkedin' ></i></a>
+                                    <a href="https://www.instagram.com/maycon.pereira_/"><i class='bx bxl-instagram-alt' ></i></a>
+                                </div>
+                                <div class="btn-cv"><a href="#">Download CV<i class='bx bxs-download' id="icon-down"></i></a></div>
+                            </div>
+                        </div>
+                        <div class="home-img">
+                            <div class="img-box">
+                                <div class="img-item">
+                                    <img src="../assets/foto-portfolio-png.png" alt="foto-perfil">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </section>
+
+             <section class="sobre" id="sobre">
+                <div class="interface">
+                    <h2 class="titulo">SOBRE MIM <span class="animate scroll" style="--i:1"></span></h2>
+                    <div class="flex">
+                        <div class="container-sobre">
+                            <div class="card-sobre">
+                                <h1 class="titulo2">CONHEÇA-ME</h1>
+                                <div class="texto-sobre">
+                                    <p>Sou desenvolvedor web em constante aprendizado e atualmente estou cursando Análise e Desenvolvimento de Sistemas. 
+                                    Tenho paixão por criar soluções práticas e intuitivas para a web, aplicando conhecimentos em HTML, CSS, JavaScript, e frameworks modernos. Estou sempre em busca de aprimorar minhas habilidades e me manter atualizado com as melhores práticas e tecnologias do setor, com o objetivo de entregar experiências digitais eficientes e funcionais.</p>
+                                </div>
+                                <span class="animate scroll" style="--i:2"></span>
+                            </div>
+                            
+                            <div class="card-skills">
+                                <h1 class="titulo2">MINHAS SKILS</h1>
+                                <div class="icons">
+                                    <div class="tech-item">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML Logo" class="tech-icon">
+                                        <p>HTML</p>
+                                    </div>
+                                    <!-- CSS Logo -->
+                                    <div class="tech-item">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS Logo" class="tech-icon">
+                                        <p>CSS</p>
+                                    </div>
+                                    <!-- JavaScript Logo -->
+                                    <div class="tech-item">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript Logo" class="tech-icon">
+                                        <p>JAVASCRIPT</p>
+                                    </div>
+                                    <!-- PHP Logo -->
+                                    <div class="tech-item">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="PHP Logo" class="tech-icon">
+                                        <p>PHP</p>
+                                    </div>
+                                    <!-- Python Logo -->
+                                    <div class="tech-item">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python Logo" class="tech-icon">
+                                        <p>PYTHON</p>
+                                    </div>
+                                    <!-- MySQL Logo -->
+                                    <div class="tech-item">
+                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" alt="MySQL Logo" class="tech-icon">
+                                        <p>MySQL</p>
+                                    </div>
+                                </div>
+                                <span class="animate scroll" style="--i:3"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </section>
+
+             <section class="education" id="education">
+                <div class="interface">
+                    <h2 class="titulo">EDUCAÇÃO<span class="animate scroll" style="--i:1"></span></h2>
+                    <div class="flex">
+                        <div class="education-box">  
+                            <div class="card-education">
+                                <div class="content">
+                                    <div class="year"><i class='bx bxs-calendar'></i> Março 2024 - Julho 2025</div>
+                                    <h3>Técnico em Desenvolvimento de Sistemas</h3>
+                                    <p class="company">Senac Hub Academy</p>
+                                </div>
+                            </div>
+                            <div class="card-education">
+                                <div class="content">
+                                    <div class="year"><i class='bx bxs-calendar' ></i> Maio, 2024</div>
+                                    <h3>Python Essentials 1</h3>
+                                    <p class="company">Cisco Networking Academy</p>
+                                </div>
+                            </div>
+                            <div class="card-education">
+                                <div class="content">
+                                    <div class="year"><i class='bx bxs-calendar' ></i> Outubro, 2024</div>
+                                    <h3>JavaScript Essentials 1</h3>
+                                    <p class="company">Cisco Networking Academy</p>
+                                </div> 
+                            </div>
+                            <div class="card-education">
+                                <div class="content">
+                                    <div class="year"><i class='bx bxs-calendar' ></i> Dezembro, 2024</div>
+                                    <h3>Introduction Cybersecurity</h3>
+                                    <p class="company">Cisco Networking Academy</p>
+                                </div>
+                            </div>
+                        <span class="animate scroll" style="--i:2">
+                        </div>
+                    </div>
+                </div>
+             </section>
+
+             <!-- <section class="skils">
+                <div class="interface">
+                        <h2 class="titulo">MINHAS SKILS</h2>
+                        <div class="icons">
+                            <div class="tech-item">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML Logo" class="tech-icon">
+                                <p>HTML</p>
+                            </div>
+                            <div class="tech-item">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS Logo" class="tech-icon">
+                                <p>CSS</p>
+                            </div>
+                            <div class="tech-item">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Logo" class="tech-icon">
+                                <p>JAVASCRIPT</p>
+                            </div>
+                            <div class="tech-item">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP Logo" class="tech-icon">
+                                <p>PHP</p>
+                            </div>
+                            <div class="tech-item">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" class="tech-icon">
+                                <p>PYTHON</p>
+                            </div>
+                            <div class="tech-item">
+                                <img src="https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg" alt="MySQL Logo" class="tech-icon">
+                                <p>MySQL</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </section> -->
+             
+             <section class="portifolio active" id="portifolio">
+                <div class="interface">
+                    <h2 class="titulo">MEU PORTFÓLIO<span class="animate scroll" style="--i:1"></h2> 
+                    <div class="portfolio-container">
+                        <div class="portfolio-box">
+                            <div class="portfolio-detalhe active">
+                                <p class="numb">01</p>
+                                <h3>Projeto Frontend</h3>
+                                <p>descrição</p>
+                                <div class="tech">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg">
+                                </div>
+                                <div class="icon">
+                                    <div class="icon">
+                                        <a href="https://github.com/MayconPereira0"><i class='bx bxl-github'></i><span>Github Repository</span></a>
+                                        <a href="#"><i class='bx bx-arrow-back'></i><span>Veja mais</span></a>
+                                    </div>    
+                                </div>
+                            <span class="animate scroll" style="--i:2">
+                            </div>
+
+                            <div class="portfolio-detalhe">
+                                <p class="numb">02</p>
+                                <h3>Projeto Frontend</h3>
+                                <p>descrição</p>
+                                <div class="tech">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg">
+                                </div>
+                                <div class="icon">
+                                    <div class="icon">
+                                        <a href="https://github.com/MayconPereira0"><i class='bx bxl-github'></i><span>Github Repository</span></a>
+                                        <a href="#"><i class='bx bx-arrow-back'></i><span>Veja mais</span></a>
+                                    </div>                                    
+                                </div>
+                            <span class="animate scroll" style="--i:3">
+                            </div>
+
+                        </div>
+                            
+                        <div class="portfolio-box">
+                            <div class="carrossel">
+                                <div class="img-slide">
+                                    <div class="img-item">
+                                        <img src="/assets/teste_img_portfolio.png" alt="">
+                                    </div>
+                                    <div class="img-item">
+                                        <img src="/assets/teste_img_portfolio.png" alt="">
+                                    </div>
+                                </div>
+                            <span class="animate scroll" style="--i:4">
+                            </div>
+                            <div class="navigation">
+                                <button class="arrow-left"><i class='bx bx-left-arrow-alt'></i></button>
+                                <button class="arrow-right"><i class='bx bx-right-arrow-alt' ></i></button>
+                                <span class="animate scroll" style="--i:5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </section>
+
+             <section class="formulario" id="formulario">
+                <div class="interface">
+                    <h2 class="titulo">FALE COMIGO <span class="animate scroll" style="--i:1"></h2>
+                    <div class="container-form">
+                        <form action="">
+                            <div class="input-box">
+                                <input type="text" name="" id="" placeholder="Nome completo" required>
+                                <input type="text" name="" id="" placeholder="Email" required>
+                                <input type="text" name="" id="" placeholder="Celular">
+                                <input type="text" name="" id="" placeholder="Assunto">
+                            </div>
+                            <div class="input-box2">
+                                <textarea name="" id="" placeholder="Mensagem" required></textarea>
+                                <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
+                            </div>
+                        <span class="animate scroll" style="--i:2">
+                        </form>
+                    </div>
+                </div>
+             </section>
+        </main>
+        <footer class="footer">
+            <div class="interface">
+                <!-- <div class="line-footer"> -->
+                    <div class="social">
+                        <a href="https://github.com/MayconPereira0"><i class='bx bxl-github'></i></a>
+                        <a href="https://www.linkedin.com/in/maycon-pereira"><i class='bx bxl-linkedin' ></i></a>
+                        <a href="https://www.instagram.com/maycon.pereira_/"><i class='bx bxl-instagram-alt' ></i></a>
+                        <span class="animate scroll" style="--i:1">
+                    </div>
+
+                    <ul class="list">
+                        <li>
+                            <a href="#topo-site">HOME</a>
+                        </li>
+                        <li>
+                            <a href="#sobre">SOBRE</a>
+                        </li>
+                        <li>
+                            <a href="#education">EDUCAÇÃO</a>
+                        </li>
+                        <li>
+                            <a href="#portifolio">PROJETOS</a>
+                        </li>
+                        <li>
+                            <a href="#formulario">CONTATO</a>
+                        </li>
+                        <span class="animate scroll" style="--i:2">
+                    </ul>
+                    <p class="copyright">
+                        © Maycon Pereira
+                        <span class="animate scroll" style="--i:3">
+                    </p>
+                <!-- </div> -->
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
