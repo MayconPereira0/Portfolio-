@@ -670,7 +670,7 @@ section.portifolio {
 
 .formulario form {
     position: relative;
-    padding: 30px 50px 30px 50px;
+    /* padding: 30px 50px 30px 50px; */
     height: 100%;
     margin-top: 10%;
     display: flex;
@@ -695,7 +695,7 @@ section.portifolio {
     border: 2px solid var(--cor-hover);
     background: #101010;
     border-radius: 15px;
-    height: 50px;
+    /* height: 50px; */
     margin: 1.5rem 0;
     resize: none;
 }
