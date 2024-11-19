@@ -34,25 +34,6 @@ body{
     overflow-y: scroll;
 }
 
-/* #intro {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 10;
-    transition: opacity 1s ease;
-    opacity: 1;
-    overflow: hidden;
-}
-
-video {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    object-position: center;
-} */
-
 .interface {
     max-width: 100vw;
     margin: 0 auto;
@@ -66,6 +47,22 @@ video {
 #Page {
     opacity: 0;
     transition: opacity 2s ease;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--cor-hover);
+    border-radius: 10px;
+    height: 250px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--fundo-escuro);
+    border-radius: 10px;
+    /* width: 50px; */
 }
 
 /* Classe que torna o conteúdo principal visível */
@@ -90,6 +87,9 @@ h1.titulo2 {
     position: relative;
 }
 
+.titulo-span {
+    color: var(--cor-hover);
+}
 /* CABEÇALHO */
 
 header {
@@ -347,7 +347,7 @@ section.sobre {
 }
 
 .container-sobre {
-    margin-top: 12%;
+    margin-top: 8%;
     /* background-color: red; */
     display: flex;
     justify-content: space-around;
@@ -369,6 +369,7 @@ section.sobre {
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding: 0px 30px 0px 30px;
 }
 
 .texto-sobre {
@@ -377,17 +378,44 @@ section.sobre {
     /* background-color: #2f55fd; */
     color: #fff;
     font-size: 24px;
-    /* width: 45%; */
+    width: 100%;
     text-align: center;
 }
 
 .icons {
+    margin-top: 8%;
     display: flex;
     justify-content: center;
     /* background-color: aqua; */
-    margin-top: 8%;
-    width: 500px;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     gap: 6%;
+}
+
+/* Animação do icon */
+.tech-item:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.tech-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.tech-item:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.tech-item:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.tech-item:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.tech-item:nth-child(6) {
+    animation-delay: 1s;
 }
 
 .tech-icon {
@@ -395,17 +423,30 @@ section.sobre {
     height: 50px;
     object-fit: contain;
     margin-bottom: 15px;
+    transition: transform 0.2s ease-in-out;
 }
 
 .tech-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: inline-block;
     text-align: center;
+    position: relative;
+    animation: snakeAnimation 3s ease-in-out infinite alternate;
 }
 
 .icons P {
     color: #fff;
+}
+
+@keyframes snakeAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 
@@ -491,10 +532,12 @@ section.portifolio {
 }
 
 .portfolio-container {
-    margin-top: 10%;
+    margin-top: 5%;
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 colunas */
     gap: 3rem;
+    align-items: center;
+    /* background-color: red; */
 }
 
 .portfolio-detalhe {
