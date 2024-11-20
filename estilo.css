@@ -346,6 +346,28 @@ section.sobre {
     /* align-items: center; */
 }
 
+.titulo-sobre {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    transform: translateX(-50%);
+    height: 60px;
+    left: 50%;
+}
+
+.titulo-sobre::after {
+    content: "";
+    position: absolute;
+    bottom: 0px; /* Distância entre o título e a linha */
+    left: 50%; /* Posiciona o começo da linha no meio do título */
+    width: 50%; /* Ajuste o comprimento da linha aqui */
+    height: 3px; /* Espessura da linha */
+    background-color: var(--cor-hover); /* Cor da linha */
+    transform: translateX(-50%); /* Centraliza a linha */
+  }
+
 .container-sobre {
     margin-top: 8%;
     /* background-color: red; */
@@ -532,7 +554,7 @@ section.portifolio {
 }
 
 .portfolio-container {
-    margin-top: 5%;
+    margin-top: 8%;
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 colunas */
     gap: 3rem;
@@ -706,14 +728,14 @@ section.portifolio {
 .container-form {
     background-color: #2A2A2A;
     border-radius: 20px;
-    height: 65%;
+    height: auto;
     width: 65%;
     margin: 0 auto;
 }
 
 .formulario form {
     position: relative;
-    /* padding: 30px 50px 30px 50px; */
+    padding: 30px 50px 30px 50px;
     height: 100%;
     margin-top: 10%;
     display: flex;
