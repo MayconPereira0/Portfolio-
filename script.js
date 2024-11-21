@@ -94,3 +94,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+// flip card
+
+// Seleciona todos os cards de educação
+const cards = document.querySelectorAll('.card-education');
+
+// Adiciona um evento de clique para cada card
+cards.forEach(card => {
+    card.addEventListener('click', function() {
+        // Alterna a classe 'flip' no card clicado
+        this.classList.toggle('flip');
+    });
+});

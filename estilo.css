@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -32,6 +34,10 @@ body{
     height: 100vh;
     /* overflow: hidden; */
     overflow-y: scroll;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    font-weight: 500;
 }
 
 .interface {
@@ -72,7 +78,7 @@ body{
 
 h2.titulo {
     color: #fff;
-    font-size: 30px;
+    font-size: 1.875rem; /* 30px para rem */
     text-align: center;
     position: relative;
     display: inline-block;
@@ -82,7 +88,7 @@ h2.titulo {
 
 h1.titulo2 {
     color: #fff;
-    font-size: 30px;
+    font-size: 1.875rem; /* 30px para rem */
     text-align: center;
     position: relative;
 }
@@ -146,6 +152,8 @@ header {
 
 
 section.topo-site {
+    display: flex;
+    align-items: center;
     /* margin-top: 10%; */
     padding: 40px 5%;
     min-height: 100vh;
@@ -209,7 +217,7 @@ section.topo-site {
 
 
 section.topo-site .flex {
-    margin-top: 18%;
+    /* margin-top: 18%; */
     align-items: center;
     justify-content: center;
     gap: 5%;
@@ -219,19 +227,19 @@ section.topo-site .flex {
     width: 50%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
 .topo-site h1 {
     color: #fff;
-    font-size: 42px;
+    font-size: 2.375rem;
 }
 
 .topo-site p {
     margin-top: 10px;
-    width: 55%;
+    width: 60%;
     color: #fff;
-    font-size: 22px;
+    font-size: 1rem;
 }
 
 .container-icons {
@@ -241,7 +249,6 @@ section.topo-site .flex {
     align-items: center;
     height: 70px;
 }
-
 
 .social-icons {
     display: flex;
@@ -272,7 +279,7 @@ section.topo-site .flex {
 }
 
 .btn-cv a {
-    font-size: 14px;
+    font-size: 0.875rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -294,14 +301,14 @@ section.topo-site .flex {
 }
 
 #icon-down {
-    font-size: 22px;
+    font-size: 1.375rem;
 }
 
 /* Animação title */
 
 .topo-site h2 {
     width: 0;
-    font-size: 42px;
+    font-size: 2.375rem;
     color: var(--titulo-destaque);
     display: inline-block;
     white-space: nowrap;
@@ -322,7 +329,7 @@ section.topo-site .flex {
         width: 0;
     }
     to {
-        width: 465px;
+        width: 580px;
     }
 }
 
@@ -348,7 +355,7 @@ section.sobre {
 
 .titulo-sobre {
     color: #fff;
-    font-size: 30px;
+    font-size: 1.875rem;
     text-align: center;
     position: relative;
     display: inline-block;
@@ -399,7 +406,7 @@ section.sobre {
     /* padding: 40px 4%; */
     /* background-color: #2f55fd; */
     color: #fff;
-    font-size: 24px;
+    font-size: 1.25rem;
     width: 100%;
     text-align: center;
 }
@@ -491,34 +498,73 @@ section.education {
 }
 
 .card-education {
-    padding: 40px 40px 8px 40px;
-    height: 180px;
+    position: relative;
+    width: 550px; /* Largura do card */
+    height: 220px; /* Altura do card */
+    perspective: 1000px;
+    cursor: pointer;
+    transition: transform 0.6s ease;
+}
+
+.card-education .card-front,
+.card-education .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
-    /* border: .2rem solid var(--cor-hover); */
+    backface-visibility: hidden; /* Impede a face de trás de ser visível quando virada */
+    transition: transform 0.6s ease;
+}
+
+.card-education .card-front {
     background-color: var(--fundo-card);
     color: var(--texto-principal);
     display: flex;
-    align-items: center;
-}  
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+}
 
-.card-education .content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.card-education .card-back {
+    background-color: var(--fundo-card);
+    transform: rotateY(180deg); /* A parte de trás começa virada */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid var(--cor-hover);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-education.flip .card-front {
+    transform: rotateY(-180deg); /* A frente vira */
+}
+
+.card-education.flip .card-back {
+    transform: rotateY(0); /* A parte de trás fica visível */
+}
+
+.card-education .card-front .content {
+    padding: 30px 20px 0px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .content .year {
-  font-size: 18px;
+  font-size: 1rem; /* 16px para rem */
   color: var(--texto-destaque);
 }
 
 .content h3 {
-  font-size: 22px;
+  font-size: 1.125rem; /* 18px para rem */
 }
 
 .content p {
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 1rem; /* 16px para rem */
 }
 
 .content .company {
@@ -572,20 +618,20 @@ section.portifolio {
 }
 
 .portfolio-box .numb {
-    font-size: 5rem;
+    font-size: 4rem;
     -webkit-text-stroke: .1rem var(--texto-principal);
     color: transparent;
     line-height: 1;
 }
 
 .portfolio-box h3 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 1rem 0 2rem;
     color: var(--texto-destaque);
 }
 
 .portfolio-box p {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     color: var(--texto-principal);
 }
 
@@ -755,11 +801,11 @@ section.portifolio {
 .formulario form textarea {
     width: 100%;
     padding: 10px;
-    font-size: 18px;
+    font-size: 1.125rem; 
     color: var(--texto-secundario);
     border: 2px solid var(--cor-hover);
     background: #101010;
-    border-radius: 15px;
+    border-radius: 10px;
     /* height: 50px; */
     margin: 1.5rem 0;
     resize: none;
@@ -771,7 +817,7 @@ section.portifolio {
 
 .btn-enviar input[type="submit"] {
     margin-top: 5%;
-    font-size: 14px;
+    font-size: 0.875rem;
     display: inline-flex;
     background: transparent;
     border: 2px solid var(--cor-hover);
@@ -780,6 +826,10 @@ section.portifolio {
     width: 10rem;
     height: 2.5rem;
     color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+
 }
 
 .btn-enviar input[type="submit"]:hover {
@@ -830,7 +880,7 @@ footer .social a:hover {
     position: relative;
     margin-top: 10px;
     padding: 0;
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 1.6;
     margin-bottom: 0;
     text-align: center;
@@ -857,7 +907,7 @@ footer .social a:hover {
     color: var(--texto-principal);
     margin-top: 50px;
     text-align: center;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 
@@ -915,10 +965,238 @@ footer .social a:hover {
 /* RESPONSIVIDADE */
 
 
-@media(max-width:1285px) {
+@media(max-width:1200px) {
     html{
-        font-size: 55%;
+        font-size: 70%;
     }
+    /* section {
+        padding: 1% 2rem;
+    } */
+    .home-img .img-box .img-item {
+        width: 250px;
+        height: 250px;
+    }
+
+    /* sobre */
+    
+    section.sobre {
+        padding: 20% 4%;
+        height: 100vh;
+    }
+
+    .card-skills, .card-sobre {
+        width: 100%; /* Os cartões ocupam 80% da largura */
+        /* background-color: red; */
+    }
+
+    .tech-icon {
+        width: 35px; /* Ícones menores em telas pequenas */
+        height: 35px;
+    }
+
+    /* educação */
+    
+    section.education {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .education-box {
+        gap: 20px;
+    }
+    
+    .card-education {
+        position: relative;
+        width: 400px;
+        height: 180px;
+        perspective: 1000px;
+    }
+
+    .card-education .card-front .content {
+        padding: 20px 0px 0px 20px;
+    }
+
+    /* portfolio */
+
+    section.portifolio {
+        padding: 10% 4%;
+        height: 100vh;
+    }
+
+    .portfolio-container {
+        grid-template-columns: 1fr;
+        margin-top: 4%;
+    }
+
+    .portfolio-box .tech img {
+        width: 30px;
+        height: 30px;
+        margin: 0px 10px 0px 0px;
+    }
+    
+    /* formulario */
+
+    .formulario {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .container-form {
+        width: 80%;
+    }
+    
+    .formulario form {
+        padding: 15px 25px 15px 25px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .formulario form .input-box, .input-box2 {
+        width: 100%;
+    }
+
+    .formulario form textarea {
+        height: 150px;
+    }
+
+    .btn-enviar input[type="submit"] {
+        width: 10rem;
+        height: 3rem;
+        padding: 0.5rem 1rem;
+        margin-top: 10%;
+    }
+    
+}
+
+@media screen and (max-width: 992px) {
+    /* menu */
+
+    header{
+        height: 10%;
+        display: flex;
+        align-items: center;
+    }
+
+    /* home */
+
+    .home-img .img-box .img-item {
+        width: 250px;
+        height: 250px;
+    }
+
+    /* sobre */
+
+    section.sobre {
+        padding: 30% 4%;
+        display: flex;
+        align-items: center;
+    }
+
+    .container-sobre {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-skills, .card-sobre {
+        width: 100%;
+    }
+
+    .texto-sobre {
+        margin-bottom: 10%;
+    }
+    
+    .tech-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .icons {
+        margin-top: 10%;
+    }
+
+    /* educação */
+
+    .education-box {
+        grid-template-columns: repeat(1, 1fr); /* Empilha os cards um embaixo do outro em dispositivos maiores */
+        gap: 20px; /* Reduz o espaçamento entre os cards */
+    }
+    
+    .card-education {
+        position: relative;
+        width: 360px;
+        height: 160px;
+        perspective: 1000px;
+    }
+
+    .card-education .card-front .content {
+        padding: 20px 0px 0px 0px;
+    }
+
+    /* portfolio */
+    
+    section.portifolio {
+        padding: 20% 4%;
+        height: 100vh;
+    }
+
+    /* footer */
+ 
+    .footer ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width:810px) {
+    .topo-site .flex {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .txt-topo h1 {
+        margin-top: 20%;
+    }
+
+    .home-img .img-box .img-item {
+        width: 200px;
+        height: 200px;
+    }
+
+    .txt-topo {
+        width: 90%;
+        text-align: center;
+    }
+
+    .txt-topo h1, .txt-topo h2 {
+        font-size: 2rem;
+    }
+
+    .txt-topo p {
+        font-size: 1rem;
+        margin: 0 auto;
+    }
+
+    .container-icons {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .btn-cv a {
+        width: auto;
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    
 }
 
 @media(max-width:895px) {
@@ -930,6 +1208,7 @@ footer .social a:hover {
     top: 100%;
     right: 0;
     width: 50%;
+    height: auto;
     padding: 1rem 3%;
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(20px);
@@ -943,32 +1222,19 @@ footer .social a:hover {
   }
   .navbar a {
     display: block;
-    font-size: 2rem;
-    margin: 3rem 0;
+    font-size: 1rem;
+    margin: 2rem 0;
     color: var(--texto-principal);
   }
-
-  /* .topo-site{
-    flex-direction: column-reverse;
-    margin: 5rem 4rem;
-  }
-  .txt-topo h1{
-    font-size: 2.6rem;
-  }
-  .txt-topo h2{
-    font-size: 8rem;
-    margin-top: 3rem;
-  }
-  .txt-topo p{
-    max-width: 600px;
-    margin: 0 auto;
-  } */
-
 }
 
-/* ANIMAÇÃO COMEÇA AS 1.34
-
-PAREI EM 1.47 */
+@media(max-width:480px){
+    /* home */
+    .home-img .img-box .img-item {
+        width: 180px;
+        height: 180px;
+    }
+}
 
 
 
