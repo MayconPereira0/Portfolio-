@@ -154,10 +154,8 @@ header {
 section.topo-site {
     display: flex;
     align-items: center;
-    /* margin-top: 10%; */
     padding: 40px 5%;
     min-height: 100vh;
-    /* background-color: rgb(175, 175, 175); */
 }
 
 .home-img .img-box {
@@ -265,7 +263,7 @@ section.topo-site .flex {
     border: 2px solid var(--cor-hover);
     font-size: 2rem;
     border-radius: 50%;
-    color: var("num-sei");
+    color: var(--texto-principal);
     margin: 3rem 1.5rem 3rem 0;
     transition: 0.3s ease-in-out;
     text-decoration: none;
@@ -307,7 +305,7 @@ section.topo-site .flex {
 /* Animação title */
 
 .topo-site h2 {
-    width: 0;
+    width: 100%;
     font-size: 2.375rem;
     color: var(--titulo-destaque);
     display: inline-block;
@@ -329,7 +327,7 @@ section.topo-site .flex {
         width: 0;
     }
     to {
-        width: 580px;
+        width: 100%;
     }
 }
 
@@ -1075,7 +1073,7 @@ footer .social a:hover {
 @media screen and (max-width: 992px) {
     /* menu */
 
-    header{
+    header {
         height: 10%;
         display: flex;
         align-items: center;
@@ -1163,7 +1161,7 @@ footer .social a:hover {
     }
 
     .txt-topo h1 {
-        margin-top: 20%;
+        margin-top: 10%;
     }
 
     .home-img .img-box .img-item {
@@ -1203,7 +1201,7 @@ footer .social a:hover {
   #menu-icon{
     display: block;
   }
-  .navbar{
+  .navbar {
     position: absolute;
     top: 100%;
     right: 0;
@@ -1230,10 +1228,36 @@ footer .social a:hover {
 
 @media(max-width:480px){
     /* home */
+    section.topo-site {
+        padding: 115px 5%;
+    }
+
     .home-img .img-box .img-item {
         width: 180px;
         height: 180px;
     }
+
+    .txt-topo {
+        gap: 5;
+    }
+
+    .topo-site h1 {
+        font-size: 2rem;
+    }
+    
+    .topo-site p {
+        margin-top: 10px;
+        font-size: .8rem;
+    }
+
+    .social-icons a {
+        margin: 1rem;
+    }
+    .topo-site h2 {
+        font-size: 1.72rem;
+    }
+
+    
 }
 
 
