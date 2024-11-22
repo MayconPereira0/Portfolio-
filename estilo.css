@@ -1257,6 +1257,44 @@ footer .social a:hover {
         font-size: 1.72rem;
     }
 
+    /* sobre */
+
+    section.sobre {
+        height: 105vh;
+        background-color: red;
+        align-items: center;
+    }
+    .texto-sobre {
+        margin-bottom: 20%;
+        font-size: 1rem;
+    }
+
+    .card-skills{
+        height: auto;
+        width: 100%;
+    }
+
+    .icons{
+        flex-wrap: wrap;
+        gap: 8%;
+        padding: auto;
+        margin-top: 20%;
+    }
+    .tech-item{
+        /* background-color: red; */
+        width:100px;
+        margin-bottom: 25px;
+    }
+
+    /* educação */
+    section.education{
+        
+    }
+    
+
+
+
+
     
 }
 
